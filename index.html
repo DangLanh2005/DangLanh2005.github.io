@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Travelo</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            font-family: "Lucida Console", Courier, monospace;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        header {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            /* z-index: 10; */
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+            height: 80px;
+        }
+
+        header ul {
+            flex-direction: row;
+            list-style-type: none;
+        }
+
+        header ul li {
+            padding: 0px 10px 0px 10px;
+        }
+
+        header img {
+            width: 138px;
+            height: 41px;
+        }
+
+        #banner img {
+            padding-top: 80px;
+            width: 100%;
+            height: 700px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .centered h3 {
+            font-size: 5em;
+        }
+
+        .centered p {
+            font-size: 1.5em;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .dis {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .des {
+            display: block;
+            text-align: center;
+            padding: auto;
+            width: 100%;
+        }
+
+        .des h3 {
+            font-size: 2.5em;
+        }
+
+        .form {
+            text-align: center;
+            padding: 40px 80px 40px 80px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            background: gainsboro;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        iframe {
+            display: block;
+            text-align: center;
+            margin: auto;
+            /* padding: 20px 50px 10px 280px; */
+        }
+
+        input {
+            padding: 15px 50px 15px 50px;
+            width: 200px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .box {
+            background: red;
+        }
+
+        .flex form {
+            align-items: center !important;
+        }
+
+        .figure1 {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0px 10px 0px;
+        }
+
+
+        figure {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            padding: 30px 40px 30px 40px;
+            justify-content: space-between;
+            background: #040E27;
+            color: white;
+        }
+
+        .insta img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        #text {
+            padding-top: 20px;
+        }
+
+        .insta h3 {
+            display: flex;
+            justify-content: center;
+        }
+
+        /*.flex.fa.fa-phone {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 16px;
+            color: red;
+            margin-right: 5px;
+        } */
+        .image-country {
+            position: relative;
+            text-align: left;
+            color: black;
+        }
+
+        .left-corner {
+            position: absolute;
+            top: 80%;
+            left: 5%;
+            color: red;
+
+        }
+
+        .countries {
+            margin: 50px 10% 100px 10%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .image-places h4,p{
+            padding-left: 20px;
+        }
+        .image-places {
+            
+            justify-content: left;
+            text-align: left;
+            flex-direction: column;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flex">
+        <img src="logo.png" alt="logo">
+        <ul class="flex">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Destination">Destination</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+        <p> <i class="fa fa-phone"></i> 10(256)-928 256</p>
+    </header>
+    <div id="banner" class="container">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop" alt="banner">
+        <div class="centered">
+            <h3>Travel around the World</h3>
+            <p>I love travel</p>
+        </div>
+    </div>
+    <div class="des">
+        <div>
+            <h3>Popular Destination</h3>
+        </div>
+        <div>
+            <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf
+                moon beard words.</p>
+        </div>
+        <div id='countries1' class="countries">
+            <div class='image-country'>
+                <div class="left-corner">
+                    <h4>America</h4>
+                </div>
+                <img src="1.png" alt="picture">
+            </div>
+            <div class='image-country'>
+                <div class="left-corner">
+                    <h4>Italy</h4>
+                </div>
+                <img src="2.png" alt="picture">
+            </div>
+            <div class='image-country'>
+                <div class="left-corner">
+                    <h4>Brazil</h4>
+                </div>
+                <img src="3.png" alt="picture">
+            </div>
+
+        </div>
+        <div id='countries2' class="countries">
+            <div class='image-country'>
+                <div class="left-corner">
+                    <h4>Indonesia</h4>
+                </div>
+                <img src="4.png" alt="picture">
+            </div>
+            <div class='image-country'>
+                <div class="left-corner">
+                    <h4>Nepal</h4>
+                </div>
+                <img src="5.png" alt="picture">
+            </div>
+            <div class='image-country'>
+                <div class="left-corner">
+                    <h4>Maldives</h4>
+                </div>
+                <img src="6.png" alt="picture">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- mail input  -->
+    <div class="form flex">
+        <div class="content">
+            <h2>Subscribe Our Newsletter</h2>
+            <p>Subscribe newsletter to get offers and about new places to discover.</p>
+        </div>
+        <div>
+            <input type="email" placeholder="Your mail">
+            <input class="box" type="submit" value="Submit">
+        </div>
+    </div>
+
+    <!-- places cost -->
+    <div class='des'>
+        <div>
+            <h3>Popular Places</h3>
+        </div>
+        <div>
+            <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf
+                moon beard words.</p>
+        </div>
+
+        <div id='places' class="countries">
+            <div class='image-places flex'>
+                <img src="image/place/1.png" alt="picture">
+
+                <h4>California</h4>
+                <p style="color: gray;">United State of America</p>
+
+            </div>
+            <div class='image-places flex'>
+                <img src="image/place/2.png" alt="picture">
+
+                <h4>Italy</h4>
+                <p style="color: gray;">United State of America</p>
+
+            </div>
+            <div class='image-places flex'>
+                <img src="image/place/3.png" alt="picture">
+
+                <h4>Brazil</h4>
+                <p style="color: gray;">United State of America</p>
+
+            </div>
+
+
+        </div>
+        <div id='places' class="countries">
+            <div class='image-places flex'>
+                <img src="image/place/4.png" alt="picture">
+    
+                <h4>Indonesia</h4>
+                <p style="color: gray;">United State of America</p>
+    
+            </div>
+            <div class='image-places flex'>
+                <img src="image/place/5.png" alt="picture">
+    
+                <h4>Nepal</h4>
+                <p style="color: gray;">United State of America</p>
+    
+            </div>
+            <div class='image-places flex'>
+                <img src="image/place/6.png" alt="picture">
+    
+                <h4>Maldives</h4>
+                <p style="color: gray;">United State of America</p>
+    
+            </div>
+    
+    
+        </div>
+    </div>
+ 
+    </div>
+
+    <iframe width="1024" height="576" src="https://www.youtube.com/embed/WhQapHmaYYE" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="figure1">
+        <div>
+            <figure>
+                <img src="https://colorlib.com/preview/theme/travelo/img/svg_icon/1.svg" alt="">
+                <figcaption>
+                    <h2>Comfortable Journey</h2>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure>
+                <img src="https://colorlib.com/preview/theme/travelo/img/svg_icon/2.svg">
+                <figcaption>
+                    <h2 class="cf">Luxuries Hotel</h2>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure>
+                <img src="https://colorlib.com/preview/theme/travelo/img/svg_icon/3.svg">
+                <figcaption>
+                    <h2 class="cf">Comfortable Journey</h2>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div>
+            <img src="logofooter.png" alt="logo">
+            <div id="text" style="width: 300px;">5th flora, 700/D kings road, green
+                lane New York-1782
+                +10 367 826 2567
+                contact@carpenter.com</div>
+        </div>
+        <div>
+            <h3>Company</h3>
+            <p></p>
+            <div>
+                <p>Pricing</p>
+                <p>About</p>
+                <p>Gallery</p>
+                <p>Contact</p>
+            </div>
+        </div>
+        <div>
+            <h3>Popular Destination</h3>
+            <div>
+                <p>Indonesia</p>
+                <p>India</p>
+                <p>Italy</p>
+                <p>Franch</p>
+            </div>
+        </div>
+        <div class="insta">
+            <h3>Instagram</h3>
+            <div>
+                <img src="https://img.thuthuatphanmem.vn/uploads/2018/10/09/hinh-anh-thien-nhien-bien-dao-dep-nhat_041755353.jpg"
+                    alt="">
+                <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500&fbclid=IwAR1bKAqhO-72EyJbYWnKAl0KBa-PhKJ1Lc_OaVyCPpLZOHdaiOQ7sR5M9nI"
+                    alt="">
+                <img src="https://i.pinimg.com/originals/91/b5/cd/91b5cdab51e207263169904b227503b4.jpg?fbclid=IwAR1bKAqhO-72EyJbYWnKAl0KBa-PhKJ1Lc_OaVyCPpLZOHdaiOQ7sR5M9nI"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1539946309076-4daf2ea73899?ixlib=rb-1.2.1&w=1000&q=80&fbclid=IwAR1bKAqhO-72EyJbYWnKAl0KBa-PhKJ1Lc_OaVyCPpLZOHdaiOQ7sR5M9nI"
+                    alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQOr1lMWtqaaUH41qIv4BksqN1ZwpkSfMsDHQ&usqp=CAU"
+                    alt="">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg?fbclid=IwAR1bKAqhO-72EyJbYWnKAl0KBa-PhKJ1Lc_OaVyCPpLZOHdaiOQ7sR5M9nI"
+                    alt="">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
